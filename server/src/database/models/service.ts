@@ -5,8 +5,10 @@ import {
   BelongsToMany,
   DataType,
 } from 'sequelize-typescript';
-import Musician from './musician';
+import Musician, { JsonMusician } from './musician';
 import MusicianService from './musicianService';
+
+export type JsonService = { name: string; musicians: JsonMusician[] };
 
 @Table({
   timestamps: true,
@@ -22,4 +24,11 @@ export default class Service extends Model {
 
   @BelongsToMany(() => Musician, () => MusicianService)
   declare musicians: Musician[];
+
+  get customJson(): JsonService {
+    return {
+      name: this.name,
+      musicians: this.musicians?.map((musician) => musician.customJson),
+    };
+  }
 }
