@@ -6,7 +6,17 @@ import {
   BelongsTo,
   DataType,
 } from 'sequelize-typescript';
-import Musician from './musician';
+import Musician, { JsonMusician } from './musician';
+import Service from './service';
+import { adjustDateTimeToCurrentDate } from './../../utils/utils';
+
+export type JsonSchedule = {
+  dateTime: Date;
+  booked: boolean;
+  name?: string;
+  musician?: JsonMusician;
+  service?: string;
+};
 
 @Table({
   timestamps: true,
@@ -42,4 +52,24 @@ export default class Schedule extends Model {
     allowNull: true,
   })
   declare name: string | null;
+
+  @ForeignKey(() => Service)
+  @Column({
+    type: DataType.INTEGER,
+    allowNull: true,
+  })
+  declare serviceId: number;
+
+  @BelongsTo(() => Service)
+  declare service: Service;
+
+  get customJson(): JsonSchedule {
+    return {
+      dateTime: adjustDateTimeToCurrentDate(this.dateTime),
+      name: this.name,
+      musician: this.musician?.customJson,
+      service: this.service?.name,
+      booked: this.booked,
+    };
+  }
 }
