@@ -10,6 +10,15 @@ import Schedule from './schedule';
 import Service from './service';
 import MusicianService from './musicianService';
 
+export type JsonMusician = {
+  id: number;
+  name: string;
+  enabled: boolean;
+  avatar: string;
+  schedules: Date[] | string[];
+  services: string[];
+};
+
 @Table({
   timestamps: true,
   tableName: 'musicians',
@@ -39,4 +48,17 @@ export default class Musician extends Model {
 
   @BelongsToMany(() => Service, () => MusicianService)
   declare services: Service[];
+
+  get customJson(): JsonMusician {
+    return {
+      id: this.id,
+      name: this.name,
+      enabled: this.enabled,
+      avatar: this.avatar,
+      schedules: this.schedules?.map(
+        (schedule) => schedule.customJson.dateTime
+      ),
+      services: this.services?.map((service) => service.customJson.name),
+    };
+  }
 }
