@@ -1,9 +1,10 @@
 import { FindOptions } from 'sequelize/types';
 import Musician from '../database/models/musician';
 import MusicianService from '../database/models/musicianService';
-import Schedule, { JsonSchedule } from '../database/models/schedule';
+import Schedule from '../database/models/schedule';
 import Service from '../database/models/service';
 import { sequelize } from '../database/sequelize';
+import { JsonSchedule } from '@shared-utils';
 
 export interface BookingRequest {
   name: string;

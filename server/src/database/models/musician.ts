@@ -9,14 +9,7 @@ import {
 import Schedule from './schedule';
 import Service from './service';
 import MusicianService from './musicianService';
-
-export type JsonMusician = {
-  id: number;
-  name: string;
-  avatar: string;
-  schedules: Date[] | string[];
-  services: string[];
-};
+import { JsonMusician } from '@shared-utils';
 
 @Table({
   timestamps: true,

@@ -1,4 +1,5 @@
-import Musician, { JsonMusician } from '../database/models/musician';
+import { JsonMusician } from '@shared-utils';
+import Musician from '../database/models/musician';
 import Schedule from '../database/models/schedule';
 import Service from '../database/models/service';
 

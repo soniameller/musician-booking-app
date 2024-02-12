@@ -5,10 +5,9 @@ import {
   BelongsToMany,
   DataType,
 } from 'sequelize-typescript';
-import Musician, { JsonMusician } from './musician';
+import Musician from './musician';
 import MusicianService from './musicianService';
-
-export type JsonService = { name: string; musicians: JsonMusician[] };
+import { JsonService } from '@shared-utils';
 
 @Table({
   timestamps: true,

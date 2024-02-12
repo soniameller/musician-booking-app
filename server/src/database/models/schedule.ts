@@ -6,17 +6,10 @@ import {
   BelongsTo,
   DataType,
 } from 'sequelize-typescript';
-import Musician, { JsonMusician } from './musician';
+import Musician from './musician';
 import Service from './service';
 import { adjustDateTimeToCurrentDate } from './../../utils/utils';
-
-export type JsonSchedule = {
-  dateTime: Date;
-  booked: boolean;
-  name?: string;
-  musician?: JsonMusician;
-  service?: string;
-};
+import { JsonSchedule } from '@shared-utils';
 
 @Table({
   timestamps: true,
