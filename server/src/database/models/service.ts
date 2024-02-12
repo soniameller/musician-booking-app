@@ -26,6 +26,7 @@ export default class Service extends Model {
 
   get customJson(): JsonService {
     return {
+      id:this.id,
       name: this.name,
       musicians: this.musicians?.map((musician) => musician.customJson),
     };

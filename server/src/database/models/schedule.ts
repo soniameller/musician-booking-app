@@ -58,9 +58,10 @@ export default class Schedule extends Model {
 
   get customJson(): JsonSchedule {
     return {
+      id: this.id,
       dateTime: adjustDateTimeToCurrentDate(this.dateTime),
       name: this.name,
-      musician: this.musician?.customJson,
+      musician: this.musician?.musicianBookingJson,
       service: this.service?.name,
       booked: this.booked,
     };

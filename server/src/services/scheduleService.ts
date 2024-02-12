@@ -16,6 +16,12 @@ const scheduleQueryConfig: FindOptions<any> = {
     {
       model: Musician,
       where: { enabled: true },
+      include: [
+        {
+          model: Service,
+          attributes: ['name', 'id'],
+        },
+      ],
     },
     {
       model: Service,
@@ -45,6 +51,7 @@ export const fetchBookedSchedules = async (): Promise<JsonSchedule[]> => {
     const dbSchedules = await Schedule.findAll({
       ...scheduleQueryConfig,
       where: { booked: true },
+      order: [['dateTime', 'ASC']],
     });
 
     return dbSchedules.map((schedule) => schedule.customJson);

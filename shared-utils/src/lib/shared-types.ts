@@ -6,15 +6,23 @@ export type JsonMusician = {
   services: string[];
 };
 
+export type JsonBookingMusician = {
+  id: string;
+  name: string;
+  services: JsonService[];
+};
+
 export type JsonSchedule = {
+  id: string;
   dateTime: Date;
   booked: boolean;
+  musician: JsonBookingMusician;
   name?: string;
-  musician?: JsonMusician;
   service?: string;
 };
 
 export type JsonService = {
+  id: string;
   name: string;
   musicians: JsonMusician[];
 };
