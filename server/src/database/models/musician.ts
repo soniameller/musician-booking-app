@@ -9,7 +9,7 @@ import {
 import Schedule from './schedule';
 import Service from './service';
 import MusicianService from './musicianService';
-import { JsonMusician } from '@shared-utils';
+import { JsonBookingMusician, JsonMusician } from '@shared-utils';
 
 @Table({
   timestamps: true,
@@ -50,6 +50,13 @@ export default class Musician extends Model {
         (schedule) => schedule.customJson.dateTime
       ),
       services: this.services?.map((service) => service.customJson.name),
+    };
+  }
+  get musicianBookingJson(): JsonBookingMusician {
+    return {
+      id: this.id,
+      name: this.name,
+      services: this.services?.map((service) => service.customJson),
     };
   }
 }
