@@ -15,10 +15,16 @@ export type JsonBookingMusician = {
 export type JsonSchedule = {
   id: string;
   dateTime: Date;
-  booked: boolean;
   musician: JsonBookingMusician;
-  name?: string;
-  service?: string;
+  booked: boolean;
+};
+
+export type JsonBooking = {
+  id: string;
+  dateTime: Date;
+  musician: JsonBookingMusician;
+  service: string;
+  name: string;
 };
 
 export type JsonService = {

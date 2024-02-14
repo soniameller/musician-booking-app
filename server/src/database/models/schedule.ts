@@ -5,11 +5,12 @@ import {
   ForeignKey,
   BelongsTo,
   DataType,
+  HasMany,
 } from 'sequelize-typescript';
 import Musician from './musician';
-import Service from './service';
 import { adjustDateTimeToCurrentDate } from './../../utils/utils';
 import { JsonSchedule } from '@shared-utils';
+import Booking from './booking';
 
 @Table({
   timestamps: true,
@@ -33,37 +34,15 @@ export default class Schedule extends Model {
   @BelongsTo(() => Musician)
   declare musician: Musician;
 
-  @Column({
-    type: DataType.BOOLEAN,
-    allowNull: false,
-    defaultValue: false,
-  })
-  declare booked: boolean;
-
-  @Column({
-    type: DataType.STRING,
-    allowNull: true,
-  })
-  declare name: string | null;
-
-  @ForeignKey(() => Service)
-  @Column({
-    type: DataType.INTEGER,
-    allowNull: true,
-  })
-  declare serviceId: number;
-
-  @BelongsTo(() => Service)
-  declare service: Service;
+  @HasMany(() => Booking)
+  declare bookings: Booking[];
 
   get customJson(): JsonSchedule {
     return {
       id: this.id,
       dateTime: adjustDateTimeToCurrentDate(this.dateTime),
-      name: this.name,
       musician: this.musician?.musicianBookingJson,
-      service: this.service?.name,
-      booked: this.booked,
+      booked: !!this.bookings?.length,
     };
   }
 }
