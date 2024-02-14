@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { JsonMusician, JsonSchedule } from '@shared-utils';
+import { JsonBooking, JsonMusician, JsonSchedule } from '@shared-utils';
 import { BookingDetailsType } from '../components/form/booking-form';
 
 const api = axios.create({
@@ -9,12 +9,12 @@ const api = axios.create({
   },
 });
 
-export const fetchSchedules = async (): Promise<JsonSchedule[]> => {
-  const response = await api.get<JsonSchedule[]>('/schedules/booked');
+export const fetchBookings = async (): Promise<JsonBooking[]> => {
+  const response = await api.get<JsonBooking[]>('/bookings');
   return response.data;
 };
 
-export const fetchMusicianSchedules = async (
+export const fetchSchedulesByMusician = async (
   musicianId: string
 ): Promise<JsonSchedule[]> => {
   const response = await api.get<JsonSchedule[]>(
@@ -38,8 +38,8 @@ export const createBooking = async ({
   scheduleId,
   name,
   serviceId,
-}: BookingDetails): Promise<JsonSchedule[]> => {
-  const response = await api.put<JsonSchedule[]>(`/schedules/${scheduleId}`, {
+}: BookingDetails): Promise<JsonBooking[]> => {
+  const response = await api.post<JsonBooking[]>(`/bookings/${scheduleId}`, {
     name,
     serviceId,
   });
