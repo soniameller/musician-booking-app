@@ -1,27 +1,27 @@
 import {
-  fetchMusicianSchedules,
+  fetchSchedulesByMusician,
   fetchMusicians,
-  fetchSchedules,
+  fetchBookings,
 } from '../services/api-service';
 import { QueryKeys } from '../const/query-keys';
 import { useQuery } from '@tanstack/react-query';
 
-export const useSchedulesQuery = () => {
+export const useBookingsQuery = () => {
   const { data, ...rest } = useQuery({
-    queryKey: [QueryKeys.SCHEDULES],
-    queryFn: async () => await fetchSchedules(),
+    queryKey: [QueryKeys.BOOKINGS],
+    queryFn: async () => await fetchBookings(),
     staleTime: Infinity,
   });
-  return { ...rest, schedules: data };
+  return { ...rest, bookings: data };
 };
 
-export const useMusicianSchedulesQuery = (musicianId: string) => {
+export const useSchedulesQuery = (musicianId: string) => {
   const { data, ...rest } = useQuery({
-    queryKey: [QueryKeys.MUSICIAN_SCHEDULES, musicianId],
-    queryFn: async () => await fetchMusicianSchedules(musicianId),
+    queryKey: [QueryKeys.SCHEDULES, musicianId],
+    queryFn: async () => await fetchSchedulesByMusician(musicianId),
     staleTime: 60 * 60 * 1000, // 1 hour
   });
-  return { ...rest, musicianSchedules: data };
+  return { ...rest, schedules: data };
 };
 
 export const useMusiciansQuery = () => {
