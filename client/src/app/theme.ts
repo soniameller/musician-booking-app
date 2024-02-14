@@ -35,11 +35,16 @@ const theme = createTheme({
     },
     subtitle2: {
       color: primaryColor,
+      fontSize: '0.8125rem',
       fontWeight: 500,
     },
     body2: {
       color: COLORS.GREY[900],
       fontWeight: 500,
+    },
+    h2: {
+      fontSize: '1.125rem',
+      fontWeight: 700,
     },
     h3: {
       fontSize: '1rem',
@@ -77,6 +82,13 @@ const theme = createTheme({
       styleOverrides: {
         body: {
           color: COLORS.BRAND[700],
+        },
+      },
+    },
+    MuiSkeleton: {
+      styleOverrides: {
+        root: {
+          borderRadius: '8px',
         },
       },
     },
