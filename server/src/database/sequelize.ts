@@ -4,11 +4,12 @@ import Schedule from './models/schedule';
 import Service from './models/service';
 import MusicianService from './models/musicianService';
 import { environment } from '../environment/environment';
+import Booking from './models/booking';
 
 const sequelize = new Sequelize({
   dialect: 'sqlite',
   storage: environment.sqlite.storage,
-  models: [Musician, Schedule, Service, MusicianService],
+  models: [Musician, Schedule, Service, MusicianService, Booking],
   logging: false,
 });
 
