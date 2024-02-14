@@ -7,7 +7,3 @@ export const formatDateToTimeStr = (inputTimestamp: Date): string => {
   });
   return formattedTime;
 };
-
-export const isDateTimePast = (dateTime: Date) => {
-  return new Date(dateTime) < new Date();
-};
