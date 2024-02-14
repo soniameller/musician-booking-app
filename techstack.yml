@@ -1,0 +1,641 @@
+repo_name: soniameller/musiversal-fullstack-challenge
+report_id: 5b9d22c7bc98015fc272d9d57bb70e9a
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-14T11:12:06+00:00'
+requested_by: soniameller
+provider: github
+branch: main
+detected_tools_count: 46
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge
+  detection_source: Repo Metadata
+- name: ExpressJS
+  description: Sinatra inspired web development framework for node.js -- insanely
+    fast, flexible, and simple
+  website_url: http://expressjs.com/
+  version: 4.18.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Microframeworks (Backend)
+  image_url: https://img.stackshare.io/service/1163/hashtag.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: Node.js
+  description: A platform built on Chrome's JavaScript runtime for easily building
+    fast, scalable network applications
+  website_url: http://nodejs.org/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Frameworks (Full Stack)
+  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:13:11.000000000 Z
+- name: React
+  description: A JavaScript library for building user interfaces
+  website_url: https://reactjs.org/
+  version: 18.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript UI Libraries
+  image_url: https://img.stackshare.io/service/1020/OYIaJ1KK.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: React Router
+  description: A complete routing solution for React.js
+  website_url: https://github.com/rackt/react-router
+  version: 6.11.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: JavaScript Framework Components
+  image_url: https://img.stackshare.io/service/3350/8261421.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: SQLite
+  description: A software library that implements a self-contained, serverless, zero-configuration,
+    transactional SQL database engine
+  website_url: http://www.sqlite.org/
+  open_source: false
+  hosted_saas: true
+  category: Data Stores
+  sub_category: Databases
+  image_url: https://img.stackshare.io/service/1071/sqlite.jpg
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:13:11.000000000 Z
+- name: Sequelize
+  description: Easy-to-use multi SQL dialect ORM for Node.js
+  website_url: https://sequelize.org/
+  version: 6.36.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Object Relational Mapper (ORM)
+  image_url: https://img.stackshare.io/service/3211/3591786.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: Babel
+  description: Use next generation JavaScript, today.
+  website_url: http://babeljs.io/
+  version: 7.23.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JavaScript Compilers
+  image_url: https://img.stackshare.io/service/2739/-1wfGjNw.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: client/.babelrc
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:13:11.000000000 Z
+- name: Esbuild
+  description: An extremely fast JavaScript bundler
+  website_url: https://esbuild.github.io/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/25166/default_2dcc9286a150737a14625d18f6f93747f72be430.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge
+  detection_source: Repo Metadata
+- name: Jest
+  description: Painless JavaScript Unit Testing
+  website_url: http://facebook.github.io/jest/
+  version: 29.7.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Javascript Testing Framework
+  image_url: https://img.stackshare.io/service/830/jest.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:13:11.000000000 Z
+- name: Prettier
+  description: Prettier is an opinionated code formatter.
+  website_url: https://prettier.io/
+  version: 2.8.8
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: Webpack
+  description: A bundler for javascript and friends
+  website_url: http://webpack.js.org
+  version: 5.90.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/1682/IMG_4636.PNG
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: client/webpack.config.js
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:13:11.000000000 Z
+- name: axios
+  description: Promise based HTTP client for the browser and node.js
+  website_url: https://github.com/mzabriskie/axios
+  version: 1.6.7
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Javascript Utilities & Libraries
+  image_url: https://img.stackshare.io/no-img-open-source.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: "@babel/core"
+  description: Babel compiler core
+  package_url: https://www.npmjs.com/@babel/core
+  version: 7.23.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15810/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: "@babel/preset-react"
+  description: Babel preset for all React plugins
+  package_url: https://www.npmjs.com/@babel/preset-react
+  version: 7.23.3
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15890/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: "@svgr/webpack"
+  description: SVGR webpack loader
+  package_url: https://www.npmjs.com/@svgr/webpack
+  version: 8.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16411/default_aa91da3cee4d961f0eea8ca5de77f399ec7ec794.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: "@testing-library/react"
+  description: Simple and complete React DOM testing utilities that encourage good
+    testing practices
+  package_url: https://www.npmjs.com/@testing-library/react
+  version: 14.0.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16549/default_d522554c6a41cb28d922d6d3ad32ad4afa0e3bb5.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: "@types/express"
+  description: TypeScript definitions for Express
+  package_url: https://www.npmjs.com/@types/express
+  version: 4.17.21
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16100/default_d947c1690e032a288145c7e2491999eab3ea8ede.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@types/jest"
+  description: TypeScript definitions for Jest
+  package_url: https://www.npmjs.com/@types/jest
+  version: 29.5.12
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15840/default_004658cda9b38934f2871435e9dc15608c86e8be.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@types/node"
+  description: TypeScript definitions for Node.js
+  package_url: https://www.npmjs.com/@types/node
+  version: 18.16.9
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@types/react"
+  description: TypeScript definitions for React
+  package_url: https://www.npmjs.com/@types/react
+  version: 18.2.33
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15894/default_1d65e37e65b7f80761374f0202776043277d505d.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@types/react-dom"
+  description: TypeScript definitions for React
+  package_url: https://www.npmjs.com/@types/react-dom
+  version: 18.2.14
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15946/default_54b691c123fc8979741e800e4dcd3936c0f3b246.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@types/sequelize"
+  description: TypeScript definitions for Sequelize
+  package_url: https://www.npmjs.com/@types/sequelize
+  version: 4.28.20
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18305/default_adee5b58cc2acb885faff4066ee6d7281131005f.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@typescript-eslint/eslint-plugin"
+  description: TypeScript plugin for ESLint
+  package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
+  version: 6.21.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: "@typescript-eslint/parser"
+  description: An ESLint custom parser which leverages TypeScript ESTree
+  package_url: https://www.npmjs.com/@typescript-eslint/parser
+  version: 6.21.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: babel-jest
+  description: Jest plugin to use babel for transformation
+  package_url: https://www.npmjs.com/babel-jest
+  version: 29.7.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15839/default_4479dbac220be99e50e724b2df6cf415241d71fd.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: eslint-config-prettier
+  description: Turns off all rules that are unnecessary or might conflict with Prettier
+  package_url: https://www.npmjs.com/eslint-config-prettier
+  version: 9.1.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15879/default_0b10af8ca19c215f781dc07442e75bdc831089d0.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: eslint-plugin-import
+  description: Import with sanity
+  package_url: https://www.npmjs.com/eslint-plugin-import
+  version: 2.27.5
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15806/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: eslint-plugin-jsx-a11y
+  description: Static AST checker for accessibility rules on JSX elements
+  package_url: https://www.npmjs.com/eslint-plugin-jsx-a11y
+  version: 6.7.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15845/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: eslint-plugin-react
+  description: React specific linting rules for ESLint
+  package_url: https://www.npmjs.com/eslint-plugin-react
+  version: 7.32.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15817/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: eslint-plugin-react-hooks
+  description: ESLint rules for React Hooks
+  package_url: https://www.npmjs.com/eslint-plugin-react-hooks
+  version: 4.6.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16149/default_1f3a2fc7d882e29a43394ecdf491b8989ea3f0fa.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: express
+  description: Fast, unopinionated, minimalist web framework
+  package_url: https://www.npmjs.com/express
+  version: 4.18.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15818/default_db4a7791d2f1174547374b9b587bc10fec088a5a.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: jest-environment-jsdom
+  description: Delightful JavaScript Testing
+  package_url: https://www.npmjs.com/jest-environment-jsdom
+  version: 29.7.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18413/default_867ef7396016341fd213fa568d6de11cc98fefff.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: react-dom
+  description: React package for working with the DOM
+  package_url: https://www.npmjs.com/react-dom
+  version: 18.2.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15808/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: react-router-dom
+  description: DOM bindings for React Router
+  package_url: https://www.npmjs.com/react-router-dom
+  version: 6.11.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16025/default_e25d1fbb04a118c79fb444294461417342bd03bf.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: sequelize-cli
+  description: The Sequelize CLI
+  package_url: https://www.npmjs.com/sequelize-cli
+  version: 6.6.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/18714/default_5921235b47b1f6f3bd5aba9257245016601078bf.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: sqlite3
+  description: Asynchronous, non-blocking SQLite3 bindings
+  package_url: https://www.npmjs.com/sqlite3
+  version: 5.1.7
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16285/default_3b7197abc4df3d7fa7c5292f17b2e6fb0cd1c8d4.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
+- name: ts-jest
+  description: A preprocessor with source maps support to help use TypeScript with
+    Jest
+  package_url: https://www.npmjs.com/ts-jest
+  version: 29.1.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15864/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: ts-node
+  description: TypeScript execution environment and REPL for node.js
+  package_url: https://www.npmjs.com/ts-node
+  version: 10.9.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15830/default_6743ba96cf149a3c3c68a185199f9705d6eff80e.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:21:34.000000000 Z
+- name: tslib
+  description: Runtime library for TypeScript helper functions
+  package_url: https://www.npmjs.com/tslib
+  version: 2.6.2
+  license: 0BSD
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15853/default_97d4687bd07ff1bb963fd566c84e7cbf7c73bbee.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: url-loader
+  description: A loader for webpack which transforms files into base64 URIs
+  package_url: https://www.npmjs.com/url-loader
+  version: 4.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15858/default_a2f722724df977d0f7752839e5d8845ab41f69d5.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:18:59.000000000 Z
+- name: webpack-cli
+  description: CLI for webpack &amp; friends
+  package_url: https://www.npmjs.com/webpack-cli
+  version: 5.1.4
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15826/default_14fd11531839d935f920b6d55bd6f3528c890ad7.png
+  detection_source_url: https://github.com/soniameller/musiversal-fullstack-challenge/blob/main/package-lock.json
+  detection_source: package.json
+  last_updated_by: Sonia Meller
+  last_updated_on: 2024-02-10 23:26:43.000000000 Z
