@@ -8,7 +8,7 @@ import {
   HasMany,
 } from 'sequelize-typescript';
 import Musician from './musician';
-import { adjustDateTimeToCurrentDate } from './../../utils/utils';
+import { adjustDateTimeToCurrentDate } from '../../utils/date-utils';
 import { JsonSchedule } from '@shared-utils';
 import Booking from './booking';
 

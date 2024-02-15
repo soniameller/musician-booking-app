@@ -5,7 +5,7 @@ import { JsonBooking } from '@shared-utils';
 import Booking from '../database/models/booking';
 import { Op } from 'sequelize';
 import { startOfDay, isPast } from 'date-fns';
-import { adjustDateTimeToCurrentDate } from '../utils/utils';
+import { adjustDateTimeToCurrentDate } from '../utils/date-utils';
 
 export interface BookingRequest {
   name: string;
