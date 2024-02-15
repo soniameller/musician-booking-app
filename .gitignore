@@ -33,12 +33,13 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
-# The purpuse of sharing the database file is to make it easier to test the application
-# *.sqlite
 
 # System Files
 .DS_Store
 Thumbs.db
 
 .nx/cache
-.env
+
+# I'm keeping this files in the respository for testing purposes
+# *.sqlite
+#.env
