@@ -1,11 +1,12 @@
 import Musician from '../database/models/musician';
 import Schedule from '../database/models/schedule';
 import Service from '../database/models/service';
-import { JsonBooking } from '@shared-utils';
+import { BookingResponse, JsonBooking } from '@shared-utils';
 import Booking from '../database/models/booking';
 import { Op } from 'sequelize';
 import { startOfDay, isPast } from 'date-fns';
 import { adjustDateTimeToCurrentDate } from '../utils/date-utils';
+import { sequelize } from '../database/sequelize';
 
 export interface BookingRequest {
   name: string;
@@ -49,8 +50,10 @@ export const fetchTodaysBookings = async (): Promise<JsonBooking[]> => {
 export const createBooking = async (
   scheduleId: string,
   params: BookingRequest
-): Promise<JsonBooking> => {
+): Promise<BookingResponse> => {
   const { name, serviceId } = params;
+
+  const transaction = await sequelize.transaction();
 
   try {
     const schedule = await Schedule.findByPk(scheduleId, {
@@ -61,7 +64,7 @@ export const createBooking = async (
             {
               model: Service,
               where: {
-                serviceId,
+                id: serviceId,
               },
               required: false,
             },
@@ -95,23 +98,30 @@ export const createBooking = async (
       throw new Error('The selected service is not offered by the musician.');
     }
 
-    if (!schedule.musician.services.length) {
-      throw new Error('The selected service is not offered by the musician.');
-    }
-
     if (isPast(adjustDateTimeToCurrentDate(schedule.dateTime))) {
       throw new Error('The selected date is in the past');
     }
 
-    const booking = await Booking.create({
-      name,
-      serviceId,
-      scheduleId,
-    });
+    const booking = await Booking.create(
+      {
+        name,
+        serviceId,
+        scheduleId,
+      },
+      { transaction }
+    );
 
-    return booking.customJson;
+    await transaction.commit();
+
+    const response: BookingResponse = {
+      status: 'success',
+      message: 'Booking successfully created',
+      bookingId: booking.id,
+    };
+
+    return response;
   } catch (error) {
-    console.error('Error booking schedule:', error);
-    throw new Error('Failed to create booking');
+    await transaction.rollback();
+    throw new Error(error);
   }
 };
