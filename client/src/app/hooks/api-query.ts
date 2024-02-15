@@ -10,7 +10,7 @@ export const useBookingsQuery = () => {
   const { data, ...rest } = useQuery({
     queryKey: [QueryKeys.BOOKINGS],
     queryFn: async () => await fetchBookings(),
-    staleTime: Infinity,
+    refetchInterval: 60 * 10 * 1000, // 10 minutes,
   });
   return { ...rest, bookings: data };
 };
@@ -19,7 +19,8 @@ export const useSchedulesQuery = (musicianId: string) => {
   const { data, ...rest } = useQuery({
     queryKey: [QueryKeys.SCHEDULES, musicianId],
     queryFn: async () => await fetchSchedulesByMusician(musicianId),
-    staleTime: 60 * 60 * 1000, // 1 hour
+    staleTime: 1 * 30 * 1000, // 30 seconds,
+    refetchInterval: 5 * 60 * 1000, // 5 minutes
   });
   return { ...rest, schedules: data };
 };
@@ -27,7 +28,10 @@ export const useSchedulesQuery = (musicianId: string) => {
 export const useMusiciansQuery = () => {
   const { data, ...rest } = useQuery({
     queryKey: [QueryKeys.MUSICIANS],
-    queryFn: async () => await fetchMusicians(),
+    queryFn: async () => {
+      const musicians = await fetchMusicians();
+      return musicians.filter((musician) => musician.enabled);
+    },
     staleTime: Infinity,
   });
   return { ...rest, musicians: data };
