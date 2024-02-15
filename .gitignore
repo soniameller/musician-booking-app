@@ -41,4 +41,7 @@ testem.log
 Thumbs.db
 
 .nx/cache
-.env
+
+# I'm keeping this files in the respository for testing purposes
+# *.sqlite
+#.env

@@ -9,7 +9,7 @@ import {
 import Schedule from './schedule';
 import Service from './service';
 import { JsonBooking } from '@shared-utils';
-import { adjustDateTimeToCurrentDate } from './../../utils/utils';
+import { adjustDateTimeToCurrentDate } from '../../utils/date-utils';
 
 @Table({
   timestamps: true,

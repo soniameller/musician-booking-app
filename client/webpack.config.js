@@ -8,6 +8,10 @@ module.exports = {
   },
   devServer: {
     port: 4200,
+    historyApiFallback: true,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
   },
   plugins: [
     new NxWebpackPlugin({
