@@ -6,8 +6,6 @@ import Service from '../database/models/service';
 export const fetchEnabledMusicians = async (): Promise<JsonMusician[]> => {
   try {
     const dbMusicians = await Musician.findAll({
-      // The challenge API response example includes !enabled musicians but I thought i'd be better to exclude them
-      where: { enabled: true },
       include: [
         {
           model: Schedule,

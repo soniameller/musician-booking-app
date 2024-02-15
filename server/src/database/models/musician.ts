@@ -45,6 +45,7 @@ export default class Musician extends Model {
     return {
       id: this.id,
       name: this.name,
+      enabled: this.enabled,
       avatar: this.avatar,
       schedules: this.schedules?.map(
         (schedule) => schedule.customJson.dateTime
