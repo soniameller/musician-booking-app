@@ -4,6 +4,7 @@ import { useMusiciansQuery } from '../hooks/api-query';
 import { Grid } from '@mui/material';
 import { MusiciansSkeleton } from '../components/feedback/skeleton/musicians-skeleton';
 import { ErrorAlert } from '../components/feedback/error-alert';
+import { useIsLarge } from '../hooks/use-screen-sizes';
 
 interface MusiciansProps {
   selectedId?: string;
@@ -16,6 +17,8 @@ export const Musicians = ({ selectedId }: MusiciansProps) => {
     isError: musicianIsError,
   } = useMusiciansQuery();
 
+  const isLarge = useIsLarge();
+
   if (musicianIsLoading) {
     return <MusiciansSkeleton />;
   }
@@ -25,7 +28,7 @@ export const Musicians = ({ selectedId }: MusiciansProps) => {
   }
 
   return (
-    <Grid container spacing={3}>
+    <Grid container spacing={3} justifyContent={isLarge ? 'center' : undefined}>
       {musicians.map((musician: JsonMusician) => (
         <Grid item key={musician.id}>
           <MusicianCard

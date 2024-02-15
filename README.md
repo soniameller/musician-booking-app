@@ -72,6 +72,7 @@ You can view the Entity Relation Diagram for this project by following [this lin
 - Custom 404 page
 - Form validation
 - List all musician services
+- Responsive design: [Mobile View](https://ihack-cloud.s3.eu-west-3.amazonaws.com/mobile-view.png), [Tablet View](https://ihack-cloud.s3.eu-west-3.amazonaws.com/tablet-view.png)
 
 ## 🐛Known Bugs
 
@@ -88,6 +89,7 @@ You can view the Entity Relation Diagram for this project by following [this lin
 - Enhanced error feedback for client-side operations
 - User-friendly URLs incorporating musician names instead of numeric IDs
 - Search/filter engine
+- Optimize Musicians view for mobile responsiveness
 
 ## 🚧 Challenges
 

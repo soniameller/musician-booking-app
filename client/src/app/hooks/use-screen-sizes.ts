@@ -11,3 +11,9 @@ export const useIsMedium = (): boolean => {
   const isMedium = useMediaQuery(theme.breakpoints.down('md'));
   return isMedium;
 };
+
+export const useIsLarge = (): boolean => {
+  const theme = useTheme();
+  const isMedium = useMediaQuery(theme.breakpoints.down('lg'));
+  return isMedium;
+};
