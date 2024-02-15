@@ -1,5 +1,5 @@
 import { useSchedulesQuery } from '../hooks/api-query';
-import { Box, Button, Grid, Typography, Stack } from '@mui/material';
+import { Box, Button, Grid, Typography, Stack, BoxProps } from '@mui/material';
 import { BookingDetails, createBooking } from '../services/api-service';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { QueryKeys } from '../const/query-keys';
@@ -9,6 +9,27 @@ import { Link } from 'react-router-dom';
 import { APP_ROUTES } from '../const/app-routes';
 import { ScheduleSkeleton } from '../components/feedback/skeleton/schedules-skeleton';
 import { ErrorAlert } from '../components/feedback/error-alert';
+
+interface ContentBoxProps extends BoxProps {
+  children: React.ReactNode;
+}
+
+const ContentBox = ({ children, ...rest }: ContentBoxProps) => {
+  return (
+    <Box
+      {...rest}
+      sx={{
+        backgroundColor: 'white',
+        width: '100%',
+        height: '100%',
+        borderRadius: '8px',
+        ...rest.sx,
+      }}
+    >
+      {children}
+    </Box>
+  );
+};
 
 interface SchedulesParams {
   musicianId: string;
@@ -45,23 +66,34 @@ export const Schedules = ({ musicianId }: SchedulesParams) => {
   } = useSchedulesQuery(musicianId);
 
   if (schedulesIsLoading) {
-    return <ScheduleSkeleton />;
+    return (
+      <ContentBox>
+        <ScheduleSkeleton />
+      </ContentBox>
+    );
   }
 
-  if (scheduleIsError || bookingError) {
-    return <ErrorAlert />;
+  if (scheduleIsError || bookingError || !schedules.length) {
+    return (
+      <ContentBox sx={{ p: 3 }}>
+        <Stack justifyContent={'space-between'} height={'100%'}>
+          <ErrorAlert />
+          <Button
+            component={Link}
+            to={APP_ROUTES.LANDING_PAGE.path}
+            fullWidth
+            variant="outlined"
+          >
+            Take me back home {':('}
+          </Button>
+        </Stack>
+      </ContentBox>
+    );
   }
 
-  return (
-    <Box
-      sx={{
-        backgroundColor: 'white',
-        width: '100%',
-        height: '100%',
-        borderRadius: '8px',
-      }}
-    >
-      {success ? (
+  if (success) {
+    return (
+      <ContentBox>
         <Grid container p={3} alignContent={'space-between'} height={'100%'}>
           <Grid item xs={12}>
             <Stack spacing={1}>
@@ -82,9 +114,13 @@ export const Schedules = ({ musicianId }: SchedulesParams) => {
             </Button>
           </Grid>
         </Grid>
-      ) : (
-        <BookingForm schedules={schedules} onSubmit={handleSubmit} />
-      )}
-    </Box>
+      </ContentBox>
+    );
+  }
+
+  return (
+    <ContentBox>
+      <BookingForm schedules={schedules} onSubmit={handleSubmit} />
+    </ContentBox>
   );
 };
