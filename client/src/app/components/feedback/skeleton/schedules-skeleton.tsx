@@ -7,8 +7,6 @@ export const ScheduleSkeleton = () => {
       spacing={2}
       sx={{
         height: '100%',
-        backgroundColor: 'white',
-        borderRadius: '8px',
         p: 3,
       }}
     >
