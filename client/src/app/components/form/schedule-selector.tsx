@@ -1,9 +1,9 @@
 import { FormikProps } from 'formik';
 import { Stack, FormHelperText, InputLabel } from '@mui/material';
 import ScheduleChip from './components/schedule-chip';
-import { BookingDetails } from '../../services/api-service';
 import { JsonSchedule } from '@shared-utils';
-import { BookingDetailsType } from './booking-form';
+import { BookingDetails, BookingDetailsType } from '../../types/types';
+import { isPast } from 'date-fns';
 
 interface ScheduleSelectorProps {
   schedules: JsonSchedule[];
@@ -11,6 +11,11 @@ interface ScheduleSelectorProps {
 }
 
 const ScheduleSelector = ({ schedules, formik }: ScheduleSelectorProps) => {
+  const hasAvailableSchedules = !schedules.every(
+    (schedule) => schedule.booked || isPast(schedule.dateTime)
+  );
+  const musicianName = schedules[0]?.musician?.name;
+
   return (
     <>
       <InputLabel variant="standard">When?</InputLabel>
@@ -28,6 +33,11 @@ const ScheduleSelector = ({ schedules, formik }: ScheduleSelectorProps) => {
           />
         ))}
       </Stack>
+      {!hasAvailableSchedules && musicianName && (
+        <FormHelperText error={true}>
+          All slots with {musicianName} for today are booked
+        </FormHelperText>
+      )}
       {formik.touched[BookingDetailsType.SCHEDULE_ID] &&
         formik.errors[BookingDetailsType.SCHEDULE_ID] && (
           <FormHelperText error={true}>

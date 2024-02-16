@@ -14,12 +14,12 @@ describe('App', () => {
     expect(baseElement).toBeTruthy();
   });
 
-  it('should have a greeting as the title', () => {
+  it('should display title', () => {
     const { getByText } = render(
       <BrowserRouter>
         <App />
       </BrowserRouter>
     );
-    expect(getByText(/Welcome client/gi)).toBeTruthy();
+    expect(getByText(/Musician Booking platform/gi)).toBeTruthy();
   });
 });

@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { JsonBooking, JsonMusician, JsonSchedule } from '@shared-utils';
-import { BookingDetailsType } from '../components/form/booking-form';
+import { BookingDetails } from '../types/types';
 
 const api = axios.create({
   baseURL: '/api',
@@ -27,12 +27,6 @@ export const fetchMusicians = async (): Promise<JsonMusician[]> => {
   const response = await api.get<JsonMusician[]>('/musicians');
   return response.data;
 };
-
-export interface BookingDetails {
-  [BookingDetailsType.SCHEDULE_ID]: string;
-  [BookingDetailsType.NAME]: string;
-  [BookingDetailsType.SERVICE_ID]: string;
-}
 
 export const createBooking = async ({
   scheduleId,

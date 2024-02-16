@@ -8,8 +8,7 @@ import {
 } from '@mui/material';
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { JsonService } from '@shared-utils';
-import { BookingDetails } from '../../services/api-service';
-import { BookingDetailsType } from './booking-form';
+import { BookingDetails, BookingDetailsType } from '../../types/types';
 
 interface ServiceSelectorProps {
   services: JsonService[];

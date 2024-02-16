@@ -1,13 +1,13 @@
 import { ReactNode } from 'react';
 import { Box, Toolbar, AppBar } from '@mui/material';
-import { useIsLarge } from '../../hooks/use-screen-sizes';
+import { useScreenSizes } from '../../hooks/use-screen-sizes';
 
 export interface PageWrapperProps {
   children: ReactNode;
 }
 
 export const Layout = ({ children }: PageWrapperProps) => {
-  const isLarge = useIsLarge();
+  const { isLarge } = useScreenSizes();
 
   return (
     <Box>

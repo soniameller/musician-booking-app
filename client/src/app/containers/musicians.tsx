@@ -4,7 +4,7 @@ import { useMusiciansQuery } from '../hooks/api-query';
 import { Grid } from '@mui/material';
 import { MusiciansSkeleton } from '../components/feedback/skeleton/musicians-skeleton';
 import { ErrorAlert } from '../components/feedback/error-alert';
-import { useIsLarge } from '../hooks/use-screen-sizes';
+import { useScreenSizes } from '../hooks/use-screen-sizes';
 
 interface MusiciansProps {
   selectedId?: string;
@@ -17,7 +17,7 @@ export const Musicians = ({ selectedId }: MusiciansProps) => {
     isError: musicianIsError,
   } = useMusiciansQuery();
 
-  const isLarge = useIsLarge();
+  const { isLarge } = useScreenSizes();
 
   if (musicianIsLoading) {
     return <MusiciansSkeleton />;

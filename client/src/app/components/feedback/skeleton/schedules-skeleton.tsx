@@ -12,7 +12,7 @@ export const ScheduleSkeleton = () => {
     >
       <Skeleton variant="rectangular" height={20} width={130} />
       <Skeleton variant="rectangular" height={56} />
-      <Loading text={'Loading available times...'} />
+      <Loading text="Loading available times..." />
     </Stack>
   );
 };

@@ -36,7 +36,7 @@ const ScheduleChip = ({
     <Chip
       label={formattedTime}
       disabled={isDateTimePast || schedule.booked}
-      onClick={() => onSelect()}
+      onClick={onSelect}
       color={isSelected ? 'primary' : 'default'}
       variant="filled"
     />

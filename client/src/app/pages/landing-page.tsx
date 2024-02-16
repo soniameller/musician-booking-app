@@ -23,7 +23,7 @@ export const LandingPage = () => {
             <Typography
               variant="h3"
               component="h2"
-              fontWeight={'fontWeightMedium'}
+              fontWeight="fontWeightMedium"
               color="textSecondary"
             >
               Select a musician

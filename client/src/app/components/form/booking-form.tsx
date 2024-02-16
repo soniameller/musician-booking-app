@@ -2,7 +2,7 @@ import { useFormik, FormikHelpers } from 'formik';
 import * as Yup from 'yup';
 import { Stack, Button } from '@mui/material';
 import { JsonSchedule, JsonService } from '@shared-utils';
-import { BookingDetails } from '../../services/api-service';
+import { BookingDetails, BookingDetailsType } from '../../types/types';
 import ServiceSelector from './service-selector';
 import NameInput from './name-input';
 import ScheduleSelector from './schedule-selector';
@@ -13,12 +13,6 @@ interface BookingFormProps {
     values: BookingDetails,
     formikHelpers: FormikHelpers<BookingDetails>
   ) => void | Promise<void>;
-}
-
-export enum BookingDetailsType {
-  NAME = 'name',
-  SCHEDULE_ID = 'scheduleId',
-  SERVICE_ID = 'serviceId',
 }
 
 const validationSchema = Yup.object({
@@ -49,18 +43,17 @@ const BookingForm = ({ schedules, onSubmit }: BookingFormProps) => {
 
   return (
     <form onSubmit={formik.handleSubmit} style={{ height: '100%' }}>
-      <Stack spacing={2} p={3} height={'100%'}>
-        <NameInput formik={formik} />
+      <Stack p={3} height="100%" justifyContent="space-between">
+        <Stack spacing={2}>
+          <NameInput formik={formik} />
 
-        <ScheduleSelector schedules={schedules} formik={formik} />
+          <ScheduleSelector schedules={schedules} formik={formik} />
 
-        <ServiceSelector formik={formik} services={musicianServices} />
-
-        <div style={{ marginTop: 'auto', width: '100%', paddingTop: 20 }}>
-          <Button type="submit" variant="contained" color="primary" fullWidth>
-            Book Session
-          </Button>
-        </div>
+          <ServiceSelector formik={formik} services={musicianServices} />
+        </Stack>
+        <Button type="submit" variant="contained" color="primary" fullWidth>
+          Book Session
+        </Button>
       </Stack>
     </form>
   );

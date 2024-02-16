@@ -1,7 +1,6 @@
 import { FormikProps } from 'formik';
 import { TextField, FormHelperText, InputLabel } from '@mui/material';
-import { BookingDetails } from '../../services/api-service';
-import { BookingDetailsType } from './booking-form';
+import { BookingDetails, BookingDetailsType } from '../../types/types';
 
 interface NameInputProps {
   formik: FormikProps<BookingDetails>;

@@ -33,11 +33,7 @@ export const MusicianCard = ({ musician, selected }: MusicianCardProps) => {
             pathParams: { musicianId: musician.id },
           })}
         >
-          <Stack
-            alignItems={'center'}
-            justifyContent={'center'}
-            textAlign={'center'}
-          >
+          <Stack alignItems="center" justifyContent="center" textAlign="center">
             <CardMedia
               component="img"
               sx={{ borderRadius: '50px', width: 160, height: 160 }}
