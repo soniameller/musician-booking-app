@@ -18,6 +18,7 @@ export default class Service extends Model {
   @Column({
     type: DataType.STRING,
     allowNull: false,
+    unique: true,
   })
   declare name: string;
 
@@ -26,7 +27,7 @@ export default class Service extends Model {
 
   get customJson(): JsonService {
     return {
-      id:this.id,
+      id: this.id,
       name: this.name,
       musicians: this.musicians?.map((musician) => musician.customJson),
     };
